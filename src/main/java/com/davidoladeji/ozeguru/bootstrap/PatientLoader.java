@@ -31,7 +31,7 @@ public class PatientLoader implements CommandLineRunner {
     private void createPatient() {
 
         Faker faker = new Faker(new Locale("en-US"));
-        int max = 20;
+        int max = 200;
 
         if (patientRepository.count() == 0) {
             patientRepository.save(

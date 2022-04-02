@@ -31,7 +31,7 @@ public class StaffLoader implements CommandLineRunner {
     }
     private void createStaff() throws ParseException {
         Faker faker = new Faker(new Locale("en-US"));
-        int max = 9;
+        int max = 100;
 
         if (staffRepository.count() == 0) {
             staffRepository.save(
