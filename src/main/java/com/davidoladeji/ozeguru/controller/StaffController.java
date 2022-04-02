@@ -70,7 +70,7 @@ public class StaffController {
      * Export specific Patient Data to CSV // Requirement 4
      */
 
-    @GetMapping("/patient/export/{Id}")
+    @GetMapping("patient/export/{Id}")
     public void exportPatientDataToCSV(@PathVariable long Id, HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
@@ -82,7 +82,7 @@ public class StaffController {
         Patient patient = patientService.getPatient(Id);
         ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
         String[] csvHeader = {"S\\N", "Name", "Age", "Last Visit", "CreatedAt"};
-        String[] nameMapping = {"id", "name", "age", "last_visit_date", "created_at"};
+        String[] nameMapping = {"id", "name", "age", "last_visit_date", "createdAt"};
 
         csvWriter.writeHeader(csvHeader);
 
