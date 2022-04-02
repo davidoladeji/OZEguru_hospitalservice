@@ -13,7 +13,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "d1fa571841c74cca9c340ae9086e92b2",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
 							"type": "string"
 						}
 					]
@@ -44,16 +44,11 @@
 			"name": "Get All Patients",
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "password",
-							"value": "mydream",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "daveola",
+							"key": "token",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
 							"type": "string"
 						}
 					]
@@ -89,7 +84,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "d1fa571841c74cca9c340ae9086e92b2",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
 							"type": "string"
 						}
 					]
@@ -126,7 +121,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "05c8da4ad7954884913f59828f7824dc",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
 							"type": "string"
 						}
 					]
@@ -201,10 +196,20 @@
 		{
 			"name": "Get Specific Staff",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/v1/staff/get/4",
+					"raw": "http://127.0.0.1:8080/api/v1/staff/staff/get/4",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -216,6 +221,7 @@
 					"path": [
 						"api",
 						"v1",
+						"staff",
 						"staff",
 						"get",
 						"4"
@@ -231,7 +237,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\":1,\"name\":\"David Oladeji\",\"username\":\"daveola\",\"password\":\"password\",\"uuid\":\"e423843d7e0348c392e3c304c9cdc079\",\"registration_date\":\"2022-04-01T17:24:36.441+01:00\"}",
+					"raw": "{\"name\":\"David Olade\",\"username\":\"davla\",\"password\":\"password\",\"uuid\":\"e423843d7e0348c392e3c304c9cdc079\",\"registration_date\":\"2022-04-01T17:24:36.441+01:00\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -312,7 +318,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "05c8da4ad7954884913f59828f7824dc",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
 							"type": "string"
 						}
 					]
@@ -320,7 +326,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/v1/staff/delete/209",
+					"raw": "http://127.0.0.1:8080/api/v1/staff/delete/65",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -334,7 +340,7 @@
 						"v1",
 						"staff",
 						"delete",
-						"209"
+						"65"
 					]
 				}
 			},
@@ -348,7 +354,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "05c8da4ad7954884913f59828f7824dc",
+							"value": "ba346c596eb846d7bb1eb8d41add8fc5",
 							"type": "string"
 						}
 					]

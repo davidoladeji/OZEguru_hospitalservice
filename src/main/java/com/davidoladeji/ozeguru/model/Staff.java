@@ -50,7 +50,7 @@ public class Staff implements Serializable {
     @JsonProperty("password")
     private String password;
 
-    @Column(name = "uuid")
+    @Column(name = "uuid", updatable = false)
     @JsonProperty("uuid")
     @GeneratedValue(generator="system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
