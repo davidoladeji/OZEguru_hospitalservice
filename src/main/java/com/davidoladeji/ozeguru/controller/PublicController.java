@@ -2,9 +2,12 @@ package com.davidoladeji.ozeguru.controller;
 
 import com.davidoladeji.ozeguru.model.Patient;
 import com.davidoladeji.ozeguru.model.Staff;
+import com.davidoladeji.ozeguru.repository.PatientRepository;
 import com.davidoladeji.ozeguru.service.PatientService;
 import com.davidoladeji.ozeguru.service.StaffService;
+import com.davidoladeji.ozeguru.service.implementation.StaffServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,9 +21,9 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 
-@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/v1/public/")
 public class PublicController {
@@ -28,8 +31,6 @@ public class PublicController {
 
     @Autowired
     private StaffService staffService;
-    @Autowired
-    private PatientService patientService;
 
 
     /**

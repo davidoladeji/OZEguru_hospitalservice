@@ -5,6 +5,7 @@ import com.davidoladeji.ozeguru.model.Staff;
 import com.davidoladeji.ozeguru.repository.StaffRepository;
 import com.davidoladeji.ozeguru.service.StaffService;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ import java.util.Optional;
 @Service
 public class StaffServiceImpl implements StaffService {
 
+    @Autowired
     StaffRepository staffRepository;
 
     public StaffServiceImpl(StaffRepository staffRepository) {

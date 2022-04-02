@@ -16,6 +16,7 @@ public class AuthenticationProvider extends AbstractUserDetailsAuthenticationPro
 
     @Autowired
     StaffService staffService;
+
     @Override
     protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken) throws AuthenticationException {
         //
